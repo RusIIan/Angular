@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-even',
@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./even.component.css'],
 })
 export class EvenComponent {
-  oddNumber: number;
-  removeTime = '';
-  remove(min, max) {
-    let randomOddNumber = Math.floor(Math.random() * (min - max + 1));
-    let removeTime = setInterval(() => randomOddNumber, 1000);
-  }
+  @Input() addEven:number;
 }

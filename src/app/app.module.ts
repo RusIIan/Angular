@@ -15,7 +15,7 @@ import { EvenComponent } from './task1/even/even.component';
     Task2Component,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
   ],
   imports: [
     BrowserModule,

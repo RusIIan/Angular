@@ -3,11 +3,13 @@
 </div>
 <hr>
   <div class="container">
-  <app-game-control></app-game-control>
-    <div class="row">
-      <div class="col-12">
-        <app-odd></app-odd>
-        <app-even></app-even>
+  <app-game-control (numberCreate)="addNum($event)"></app-game-control>
+    <div class="row" *ngFor="let num of nums">
+      <div class="col-6">
+        <app-odd [addNum]="num" *ngIf="num%2!==0"></app-odd>
+      </div>
+      <div class="col-6">
+        <app-even [addEven]="num" *ngIf="num%2==0"></app-even>
       </div>
     </div>
 </div>
